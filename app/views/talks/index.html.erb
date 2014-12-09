@@ -1,0 +1,6 @@
+<div class="text-center h3">77 ปี ต.อ. เสวนาวิชาการ</div>
+<div class="text-center h5">26-27 ธันวาคม 2557</div>
+<div class="text-center h5">ณ ห้อง 111 ตึก 2 โรงเรียนเตรียมอุดมศึกษา</div>
+<% Talk.all.each do |t| %>
+  <%= render partial: 'talk', object: t %>
+<% end %>
