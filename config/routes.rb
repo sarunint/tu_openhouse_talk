@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root 'talks#index'
 
-  resources :talks, only: [:index, :show] do
+  resources :talks, only: [:index] do
     resources :reservations, only: [:new, :create] do
       member do
         get 'confirm/:token' => 'reservations#confirm', as: :confirm
+        get 'ticket' => 'reservations#ticket', as: :ticket
       end
     end
   end

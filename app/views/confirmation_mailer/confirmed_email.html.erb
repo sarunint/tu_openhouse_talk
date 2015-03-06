@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%= image_tag 'openhouselogo.jpg', height: 300 %>
+    <p>สวัสดีครับ</p>
+    <p>
+      รายละเอียดการเข้ารับฟังการเสวนาของท่านเป็นดังนี้
+      <ul>
+        <li>ชื่อ : <%= @reservation.title %><%= @reservation.fname %> <%= @reservation.lname %></li>
+        <li>รายการที่เข้าฟัง : <%= @reservation.talk.name %></li>
+        <li>วันที่ : <%= l @reservation.talk.start_at, format: :formal %></li>
+        <li>เวลา : <%= l @reservation.talk.start_at, format: :time_only %> - <%= l @reservation.talk.end_at, format: :time_only %></li>
+        <li>สถานที่ : ห้อง 111 ตึก 2 โรงเรียนเตรียมอุดมศึกษา</li>
+      </ul>
+      โดยทางเราได้แนบบัตรเข้ารับฟังการเสวนามาด้วยแล้ว
+    </p>
+    <p>
+      ด้วยความเคารพ<br/>
+      กลุ่มบริหารงานวิชาการ โรงเรียนเตรียมอุดมศึกษา
+    </p>
+  </body>
+</html>

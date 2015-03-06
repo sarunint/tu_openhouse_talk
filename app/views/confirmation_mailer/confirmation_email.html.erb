@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    สวัสดีครับคุณ<%= @reservation.fname %> <%= @reservation.lname %><br/>
+    เพื่อเป็นการยืนยันการเข้าร่วมการฟังบรรยายเรื่อง "<%= @reservation.talk.name %>" ของท่าน กรุณาคลิกที่ลิงค์ต่อไปนี้<br/>
+    <br/>
+    <%= link_to @confirmation_url, @confirmation_url %><br/>
+    <br/>
+    ขอบคุณครับ
+    <pre>
+# Reservation ID : <%= @reservation.id %>
+# Created at : <%= @reservation.created_at %>
+    </pre>
+  </body>
+</html>

@@ -20,5 +20,23 @@ module TuOpenhouseTalk
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :th
     config.time_zone = 'Bangkok'
+    config.action_mailer.default_url_options = { host: 'openhouse.triamudom.ac.th', script_name: '/talk' }
+    config.action_mailer.smtp_settings = {
+      address:              'mailserver.triamudom.ac.th',
+      port:                 25,
+      domain:               'openhouse.triamudom.ac.th',
+      user_name:            'openhouse@triamudom.ac.th',
+      password:             'xbjosmyp',
+      authentication:       :login,
+      enable_starttls_auto: false }
+    # config.action_mailer.smtp_settings = {
+    #   address:              'smtp.gmail.com',
+    #   port:                 587,
+    #   domain:               'tumso.triamudom.ac.th',
+    #   user_name:            'tu.tumso@gmail.com',
+    #   password:             'mathphychembiocom',
+    #   authentication:       'plain',
+    #   enable_starttls_auto: true  }
+    config.action_mailer.asset_host = 'http://openhouse.triamudom.ac.th/talk'
   end
 end

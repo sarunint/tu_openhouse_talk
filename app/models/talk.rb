@@ -3,6 +3,7 @@ class Talk < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
   validates :max_reservations, presence: true
+  validates :count, presence: true
   validates :start_at, presence: true
   validates :end_at, presence: true
 end

@@ -43,3 +43,7 @@ gem 'bootstrap-sass'
 gem 'rails-i18n'
 
 gem 'redcarpet'
+
+gem 'resque'
+
+gem 'rails-latex'

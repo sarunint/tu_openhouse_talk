@@ -2,3 +2,4 @@
 <div>วันที่ <%= l talk.start_at, format: :formal %></div>
 <div>เวลา <%= l talk.start_at, format: :time_only %> - <%= l talk.end_at, format: :time_only %></div>
 <div><%= markdown(talk.description) %></div>
+<%= link_to 'ลงทะเบียนเข้าร่วมงาน', new_talk_reservation_path(talk), class: 'btn btn-primary' %>

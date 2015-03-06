@@ -1,0 +1,10 @@
+<% if @reservation.errors.any? %>
+  <div class="alert alert-danger">
+    มีข้อผิดพลาด <%= @reservation.errors.count %> จุด ดังต่อไปนี้
+    <ul>
+      <% @reservation.errors.full_messages.each do |e| %>
+        <li><%= e %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

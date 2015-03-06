@@ -18,8 +18,10 @@
           </button>
           <%= link_to t('page_title'), root_path, class: 'navbar-brand' %>
         </div>
+      </div>
     </nav>
     <div class="container">
+      <%= render partial: 'layouts/flash', flash: flash %> 
       <%= yield %>
     </div>
   </body>

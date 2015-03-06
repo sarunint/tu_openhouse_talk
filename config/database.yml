@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: tu_openhouse_talk_production
-  username: tu_openhouse_talk
+  username: openhouse_talk
   password: <%= ENV['TU_OPENHOUSE_TALK_DATABASE_PASSWORD'] %>
